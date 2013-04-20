@@ -1,5 +1,5 @@
+package com;
 import java.util.Date;
-
 import com.danga.MemCached.MemCachedClient;
 import com.danga.MemCached.SockIOPool;
 
@@ -41,29 +41,29 @@ public class MemCached {
     }
 
     /**
-     * 保护型构造方法，不允许实例化！
-     *
-     */
+* 保护型构造方法，不允许实例化！
+*
+*/
     protected MemCached() {
 
     }
 
     /**
-     * 获取唯一实例.
-     *
-     * @return
-     */
+* 获取唯一实例.
+*
+* @return
+*/
     public static MemCached getInstance() {
         return memCached;
     }
 
     /**
-     * 添加一个指定的值到缓存中.
-     *
-     * @param key
-     * @param value
-     * @return
-     */
+* 添加一个指定的值到缓存中.
+*
+* @param key
+* @param value
+* @return
+*/
     public boolean add(String key, Object value) {
         return mcc.add(key, value);
     }
@@ -73,12 +73,12 @@ public class MemCached {
     }
 
     /**
-     * 替换一个指定的值到缓存中.
-     *
-     * @param key
-     * @param value
-     * @return
-     */
+* 替换一个指定的值到缓存中.
+*
+* @param key
+* @param value
+* @return
+*/
     public boolean replace(String key, Object value) {
         return mcc.replace(key, value);
     }
@@ -88,22 +88,22 @@ public class MemCached {
     }
 
     /**
-     * 删除一个指定的值到缓存中.
-     *
-     * @param key
-     * @param value
-     * @return
-     */
+* 删除一个指定的值到缓存中.
+*
+* @param key
+* @param value
+* @return
+*/
     public boolean delete(String key) {
         return mcc.delete(key);
     }
 
     /**
-     * 根据指定的关键字获取对象.
-     *
-     * @param key
-     * @return
-     */
+* 根据指定的关键字获取对象.
+*
+* @param key
+* @return
+*/
     public Object get(String key) {
         return mcc.get(key);
     }
@@ -111,8 +111,8 @@ public class MemCached {
     public static void main(String[] args) {
         MemCached cache = MemCached.getInstance();
         cache.add("zf", 18);
-//		cache.replace("zf", 19);
-//        cache.delete("zf");
+// cache.replace("zf", 19);
+// cache.delete("zf");
         System.out.println("zf get value : " + cache.get("zf"));
     }
 } 
