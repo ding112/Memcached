@@ -12,7 +12,7 @@ public class MemCached {
     // 设置与缓存服务器的连接池
     static {
         // 服务器列表和其权重，个人memcached地址和端口号
-        String[] servers = { "localhost:11211" };
+        String[] servers = { "192.168.1.103:11211" };
         Integer[] weights = { 3 };
 
         // 获取socke连接池的实例对象
