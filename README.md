@@ -1,3 +1,3 @@
 Memcached
 =========
-a mencached sample
+a java mencachedUtil sample
